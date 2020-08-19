@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=https://i.ibb.co/VwSZ0nP/Shell-1.jpg">
+  <img src="https://i.ibb.co/LYq5RHP/ezgif-com-gif-maker-2.gif">
 </p>
 
 ## Summary
