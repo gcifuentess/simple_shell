@@ -1,0 +1,32 @@
+.TH man 1 "August 20 2020" "HSH" "simple_shell man page"
+
+.SH NAME
+.B simple_shell
+- simple command interpreter for UNIX-like systems.
+
+.SH SYNOPSIS
+usage: simple_shell
+
+.SH DESCRIPTION
+simple_shell is a command interpreter for the system. Reads lines from either a file or the terminal, interprets
+them, and generally executes other commands. It incorporates many features to aid interactive use and has the advantage
+of both interactive and non-interactive use (shell scripts). That is, commands can be typed directly to the running
+shell or can be put into a file and the file can be executed directly by the shell.
+
+.B Commads
+    The shell interprets the words it reads. Essentially though, a line is read and if the first word of the
+    line is a bult-in or an excecutable file then the shell has recognized a command.
+
+.B Builtins
+    This section lists the builtin commands which are builtin because they need to perform some operation that
+    can't be performed by a separate process:
+
+     exit
+            Terminate the shell process.
+
+     env
+            Prints the environment
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Marianella Monroy, Camilo Torres, Gabriel Cifuentes
