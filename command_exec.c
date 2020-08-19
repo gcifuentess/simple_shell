@@ -20,6 +20,7 @@ int command_exec(char *line)
 		pathname = _which(argv[0]);
 		if (!pathname)
 			pathname = argv[0];
+		printf("pathname: %s\n", pathname);
 		return (program_execution(argv, pathname, line));
 	}
 	else
