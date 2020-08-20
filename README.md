@@ -109,21 +109,11 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
 ## Flowchart :large_blue_diamond:
 
-![Shell Flow Chart](https://i.ibb.co/y6M2Hrk/Shell-Project-1.png "Shell Flow Chart")
+![Shell Flow Chart](https://i.ibb.co/0ZtY6FL/Shell-Project.png "Shell Flow Chart")
 
 ## Example :pencil:
 
-```C
-#include "holberton.h"
-/**
- * main - Entry point
- * Return: 0 Success
- */
-int main(void)
-{
-
-}
-```
+ ![Shell Flow Chart](https://i.ibb.co/ynHfC45/ejemplo.png "Shell Flow Chart")
 
 ## Authors :bust_in_silhouette:
 * **Gabriel Cifuentes** - [gcifuentess](https://github.com/gcifuentess/)
