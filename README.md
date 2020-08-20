@@ -4,10 +4,10 @@
 
 ## Summary
 
-This repository has been created for the project [0x16. C - Simple Shell](https://intranet.hbtn.io/projects/235). It consists of creating a Simple Shell that performs multiple requirements and tasks. 
+This repository has been created for the project [0x16. C - Simple Shell](https://intranet.hbtn.io/projects/235). It consists of creating a Simple Shell that performs multiple requirements and tasks.
 It must have the exact same output as sh (/ bin / sh) as well as the exact same error output. It only diffences when an error is printed, the name of the program argv [0].
 
-## Resources :books: 
+## Resources :books:
 
 * [Everything you need to know to start coding your own shell](https://intranet.hbtn.io/concepts/64).
 * [0x16. C - Simple Shell](https://intranet.hbtn.io/projects/235).
