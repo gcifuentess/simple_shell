@@ -9,8 +9,8 @@ void print_env(void)
 {
 	int i = 0;
 
-	while (__environ[i])
+	while (environ[i])
 	{
-		_printf("%s\n", __environ[i++]);
+		_printf("%s\n", environ[i++]);
 	}
 }

@@ -6,17 +6,17 @@
  * Return: pointer to string
  */
 
-char *_getenv(const char *name)
+char *_getenv(char *name)
 {
 	unsigned int i;
 	char *ret = NULL;
 	int len;
 
-	len = strlen(name);
+	len = _strlen(name);
 	i = 0;
-	while (__environ[i])
+	while (environ[i])
 	{
-		ret = strstr(__environ[i++], name);
+		ret = _strstr(environ[i++], name);
 		if (ret)
 		{
 			break;
