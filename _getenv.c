@@ -22,7 +22,5 @@ char *_getenv(char *name)
 			break;
 		}
 	}
-	_printf("Estamos en _getenv\n");
-	_printf("%s\n", ret);
 	return (ret + len + 1);
 }
