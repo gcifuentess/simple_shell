@@ -12,9 +12,13 @@ char *_which(char *filename)
 	struct stat st;
 	char *pathname = NULL, *needle = "PATH";
 	char **tokens = NULL;
+	char *get;
 
 	if (filename)
-		tokens = split_for_argv(_getenv(needle), ":");
+	{
+		get = _getenv(needle);
+		tokens = split_for_argv(get, ":");
+	}
 	else
 		return (pathname);
 	len_filename = _strlen(filename);
@@ -23,12 +27,9 @@ char *_which(char *filename)
 		total_len = len_filename  + _strlen(tokens[j]) + 2;
 		pathname = malloc(sizeof(char) * total_len);
 		if (!pathname)
-		{
-			free(tokens);
-			return (pathname);
-		}
+			return (free(tokens), pathname);
 		pathname[0] = '\0';
-		if (_getenv(needle)[0] == ':' && j == 0)
+		if (get[0] == ':' && j == 0)
 			_strcat(pathname, ".");
 		else
 			_strcat(pathname, tokens[j]);
@@ -36,14 +37,10 @@ char *_which(char *filename)
 		if (lstat(pathname, &st) == 0)
 		{
 			if ((st.st_mode & EXCECUTABLE) == EXCECUTABLE)
-			{
-				free(tokens);
-				return (pathname);
-			}
+				return (free(tokens), pathname);
 		}
 		free(pathname);
 	}
-	free(tokens);
 	pathname = NULL;
-	return (pathname);
+	return (free(tokens), pathname);
 }
