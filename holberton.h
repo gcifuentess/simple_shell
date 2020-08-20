@@ -18,12 +18,12 @@
 #define TRUE 1
 #define EOF_STATUS 255
 #define EXCECUTABLE (S_IFREG | S_IXUSR | S_IXGRP | S_IXOTH)
-
+extern char **environ;
 
 /*Function prototypes*/
 
 int _putchar(char c);
-char *_getenv(const char *name);
+char *_getenv(char *name);
 /*char *linkPath(const list_PT *head);*/
 char **split_for_argv(char *str, char *delimiters);
 int program_execution(char **argv, char *line, char *pathname);
@@ -34,18 +34,9 @@ int built_ins(char **argv, char *line);
 char *_which(char *filename);
 int command_exec(char *line);
 
-
+char *_strstr(char *haystack, char *needle);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 char *_strcat(char *dest, char *src);
-
-/*Structures*/
-
-typedef struct list_PATH
-{
-	char *str;
-	struct list_PATH *next;
-} list_PT;
-
 
 #endif /* HOLBERTON_H */
