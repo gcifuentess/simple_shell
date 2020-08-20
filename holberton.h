@@ -28,6 +28,7 @@ char *_getenv(char *name);
 char **split_for_argv(char *str, char *delimiters);
 int program_execution(char **argv, char *line, char *pathname);
 int _printf(const char *format, ...);
+int printerr(const char *format, ...);
 void sighandler(int sig __attribute__((unused)));
 void print_env(void);
 int built_ins(char **argv, char *line);
