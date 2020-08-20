@@ -46,5 +46,5 @@ int main(int ac __attribute__((unused)), char **av)
 		else if (WEXITSTATUS(status) == ENOENT)
 			_printf("%s: %d: %s: not found\n", av[0], cnt, line);
 	}
-	return (EXIT_SUCCESS);
+	return (WEXITSTATUS(status) == ENOENT ? 127 : EXIT_SUCCESS);
 }
