@@ -12,7 +12,7 @@ int main(int ac __attribute__((unused)), char **av)
 	char *line = NULL;
 	size_t len_retget = 0, cnt = 0;
 	pid_t child_pid;
-	int status, retget, len;
+	int status, retget, len, err_n = 0;
 
 	signal(SIGINT, sighandler);
 	while (TRUE)
@@ -43,8 +43,8 @@ int main(int ac __attribute__((unused)), char **av)
 			free(line);
 			exit(EXIT_SUCCESS);
 		}
-		else if (WEXITSTATUS(status) == ENOENT)
-			_printf("%s: %d: %s: not found\n", av[0], cnt, line);
+		else
+			err_n = prt_err(av[0], cnt, line, WEXITSTATUS(status));
 	}
-	return (WEXITSTATUS(status) == ENOENT ? 127 : EXIT_SUCCESS);
+	return (err_n);
 }

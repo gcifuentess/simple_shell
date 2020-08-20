@@ -33,6 +33,7 @@ void print_env(void);
 int built_ins(char **argv, char *line);
 char *_which(char *filename);
 int command_exec(char *line);
+int prt_err(char *av_0, int cnt, char *line, int status);
 
 char *_strstr(char *haystack, char *needle);
 int _strlen(char *s);

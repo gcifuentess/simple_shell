@@ -10,15 +10,18 @@
  */
 int program_execution(char **argv, char *pathname, char *line)
 {
+	int error_n = 0;
+
 	if (argv[0])
 	{
 		if (execve(pathname, argv, NULL) == -1)
 		{
+			error_n = errno;
 			if (pathname != argv[0])
 				free(pathname);
 			free(argv);
 			free(line);
-			return (errno);
+			return (error_n);
 		}
 	}
 	else
