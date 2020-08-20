@@ -109,11 +109,11 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 
 ## Flowchart :large_blue_diamond:
 
-![Shell Flow Chart](https://i.ibb.co/0ZtY6FL/Shell-Project.png "Shell Flow Chart")
+![Shell Flow Chart](https://i.ibb.co/wNkw5wM/Shell-Project-2.png)
 
 ## Example :pencil:
 
- ![Shell Flow Chart](https://i.ibb.co/ynHfC45/ejemplo.png "Shell Flow Chart")
+ ![Example](https://i.ibb.co/ynHfC45/ejemplo.png "Exampĺe")
 
 ## Authors :bust_in_silhouette:
 * **Gabriel Cifuentes** - [gcifuentess](https://github.com/gcifuentess/)
